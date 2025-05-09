@@ -202,7 +202,7 @@ def plot_hist(f, height=20.0, bincount=None, binwidth=None, pch="o", colour="def
     center += 15
 
     if showSummary:
-        print()
+        print("")
         print("-" * (2 + center))
         print("|" + "Summary".center(center) + "|")
         print("-" * (2 + center))
