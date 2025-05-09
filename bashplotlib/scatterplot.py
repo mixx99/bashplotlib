@@ -43,7 +43,16 @@ def _plot_scatter(xs, ys, size, pch, colour, title, cs):
                     plotted.add((xp, yp))
                     if cs:
                         colour = cs[i]
-            printcolour(point + " ", True, colour)
+            if(point != " "):
+                printcolour(point + " ", True, colour)
+            elif(x == 0 and y == 0):
+                printcolour("0" + " ", True, colour)
+            elif(x == 0):
+                printcolour("|" + " ", True, colour)
+            elif(y == 0):
+                printcolour("-" + " ", True, colour)
+            else:
+                printcolour(point + " ", True, colour)
         print(" |")
     print("+" + "-" * ((2 * (len(get_scale(xs, False, size)) + 2)) - 2) + "+")
 
